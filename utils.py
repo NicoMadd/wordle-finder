@@ -55,5 +55,4 @@ def get_all_words():
     return all_words
 
 def file_exists(file_name):
-    print(os.path.isfile(file_name))
     return os.path.isfile(file_name)
