@@ -20,7 +20,8 @@ class WordFinder:
         
     def hasNoLetterInPosition(self,letter:str,position:int):
         self.filteredWordList = [word for word in self.filteredWordList if letter not in word[position-1]]
-        
+        return self
+    
     def hasLetters(self,letters:list[str]):
         for letter in letters:
             self = self.hasLetter(letter) or self
