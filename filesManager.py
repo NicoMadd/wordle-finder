@@ -2,7 +2,6 @@ from matplotlib.font_manager import json_load
 from utils import *
 import unidecode
 
-
 ENGLISH_ALL_WORDS_FILE = "all_english_words.json"
 ENGLISH_FIVE_LETTER_WORD_FILE = "five_letter_words_english.json"
 ENGLISH_WORDS_FILE_COMPLETE = "raw_all_english_words.txt"
@@ -45,9 +44,8 @@ def make_spanish_five_letter_word_file():
     five_letter_words:list = [word for word in all_words if len(word) == 5 ]
 
     # same as before, save a file with the five letter words, better performance
-    five_letter_words_json = json.dumps(five_letter_words)
 
-    write_file_as_json(SPANISH_FIVE_LETTER_WORD_FILE,five_letter_words_json)
+    write_file_as_json(SPANISH_FIVE_LETTER_WORD_FILE,five_letter_words)
 
 def make_english_five_letter_word_file():
     
@@ -57,24 +55,21 @@ def make_english_five_letter_word_file():
     # filter five letter words
     five_letter_words:list = [word for word in all_words if len(word) == 5 ]
 
-    # same as before, save a file with the five letter words, better performance
-    five_letter_words_json = json.dumps(five_letter_words)
-
-    write_file_as_json(ENGLISH_FIVE_LETTER_WORD_FILE,five_letter_words_json)
+    write_file_as_json(ENGLISH_FIVE_LETTER_WORD_FILE,five_letter_words)
     
-def get_english_five_letter_words():
+def get_english_five_letter_words() -> list:
     data = read_file(ENGLISH_FIVE_LETTER_WORD_FILE)
     return json.loads(data)
 
-def get_spanish_five_letter_words():
+def get_spanish_five_letter_words() -> list:
     data = read_file(SPANISH_FIVE_LETTER_WORD_FILE)
     return json.loads(data)
     
-def get_spanish_all_words():
+def get_spanish_all_words() -> list:
     data = read_file(SPANISH_WORDS_FILE)
     return json.loads(data)
 
-def get_english_all_words():
+def get_english_all_words() -> list:
     data = read_file(ENGLISH_ALL_WORDS_FILE)
     return json.loads(data)
     
