@@ -1,26 +1,28 @@
 from wordFinder import WordFinder
 from utils import *
+from filesManager import *
 
 if __name__=="__main__":
-    
-    # if you want to download the main file, uncomment this
-    # if(file_exists(ALL_WORDS_FILE) == False):
-    #     download_main_file()
-    
-    # if you want to make the five letter word file, uncomment this
-    # if(file_exists(FIVE_LETTER_WORD_FILE) == False):
-    #     make_five_letter_word_file()
-        
-    # if you want to download the complete file, uncomment this
-    # if(file_exists(ALL_WORDS_FILE_COMPLETE) == False):
-    #     download_complete_file()
-    
-    
 
-    wf = WordFinder(get_five_letter_words())
+    set_files()
+    
+    dictionary = get_english_five_letter_words()
+    
+    wf = WordFinder(dictionary)
 
-    # example
-    words = wf.hasLetters(split("nol")).hasNoLetters(split("eighvautfy")).hasLetterInPosition("l",4).getWords()
+    # # example
+    # words = wf.hasLetters(split("nol")).hasNoLetters(split("eighvautfy")).hasLetterInPosition("l",4).getWords()
 
     print(words)
-
+    
+    
+    
+    
+    
+    # palabras_cinco_letras = [palabra for palabra in palabras if len(palabra) == 5]
+    
+    # print(palabras_cinco_letras)
+    
+    # download_file(file_name="palabras.txt", url="https://raw.githubusercontent.com/javierarce/palabras/master/listado-general.txt")
+    # write_file_as_json("palabras.json",data)
+    
