@@ -42,7 +42,7 @@ The search parser sintax is mainly composed by 4 components separated by pipes (
 
 An example of search parser:
 
-wf.parseSearch("artao|hyfb|a2t3|n3r4o2)
+_wf.parseSearch("artao|hyfb|a2t3|n3r4o2)_
 
 The first set indicates the letters that **ARE** present in the word to search, regardless of their position.
 
@@ -50,7 +50,7 @@ The second set indicates the letters that **ARE NOT** present in the word to sea
 
 The sintax of the first two sets is very simple. The only difference to keep in mind is that if a letter appears more than once in the first set, it means that it will search for words with n amounts of that letter.
 
-As you can see in the set "artao" we search for words with two a, one t, one o and one r.
+As you can see in the set _"artao"_ we search for words with two a, one t, one o and one r.
 
 The third set indicates the letters that **DO** appear in the word to search in the indicated position.
 
@@ -154,7 +154,7 @@ La sintaxis del parser de busqueda se compone de 4 componentes separados por pip
 
 Un ejemplo de busqueda seria:
 
-wf.parseSearch("artao|hyfb|a2t3|n3r4o2)
+_wf.parseSearch("artao|hyfb|a2t3|n3r4o2)_
 
 El primer conjunto indica las letras que **SI** estan presentes en la palabra a buscar sin importar su posicion.
 
@@ -163,7 +163,7 @@ El segundo conjunto indica las letras que **NO** estan presentes en la palabra a
 La sintaxis de los primeros dos conjuntos es bastante simple. La unica diferencia a tener en cuenta es que si una letra aparece mas de una vez en
 el primer conjunto, significa que se buscaran palabras con n cantidades de esa letra.
 
-Como se puede ver en el conjunto "artao" se buscaran palabras con dos a, una t, una o y una r.
+Como se puede ver en el conjunto _"artao"_ se buscaran palabras con dos a, una t, una o y una r.
 
 El tercer conjunto indica las letras que **SI** estan presentes en la palabra a buscar en la posicion indicada.
 
