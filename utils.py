@@ -33,3 +33,9 @@ def write_file_as_json(file_name, data):
         
 def strip_accents(s) -> str:
     return ''.join(c for c in unicodedata.normalize('NFD', s) if unicodedata.category(c) != 'Mn')
+
+def countCharOccurrences(word:str, char:str) -> int:
+    return sum(1 for c in word if c == char)
+
+def findCharOccurrences(word:str) -> list:
+    return {letter:countCharOccurrences(word,letter) for letter in word}
